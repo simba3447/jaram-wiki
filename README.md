@@ -1,8 +1,12 @@
-jaram_wiki
----
-자람의 스터디, 세미나, 워크샵 내용을 아카이브하는 위키 사이트를 개발하는 스터디
+# jaram_wiki
 
-installation
+Wiki Application for archiving study, seminar, workshop documents, powered by [Django](https://github.com/django/django) framework.
+
+Prerequisites
+---
+Python version 3.x
+
+Installation
 ---
 ```
 # Clone this repo on your working directory
@@ -12,6 +16,7 @@ $ git clone https://github.com/Jaram2017/jaram-wiki
 $ cd jaram-wiki
 
 # Create a virtualenv
+$ pip install virtualenv
 $ virtualenv venv 
 
 # activate the virtualenv
@@ -19,8 +24,14 @@ $ . venv/bin/activate
 
 # Install the packages.
 $ pip install -r requirements.txt
+```
 
-# Run Django Server
+Start the server
+---
+
+```
+# Migrate models
 $ python manage.py migrate
+# Run Django Server
 $ python manage.py runserver
 ```
