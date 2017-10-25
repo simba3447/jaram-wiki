@@ -1,0 +1,15 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+
+django = "*"
+pytz = "==2017.2"
+"psycopg2" = "*"
+djangorestframework = "*"
+"jinja2" = "*"
+
+
+[dev-packages]
