@@ -1,0 +1,35 @@
+.sidebar-left {
+  border-right-style: solid;
+  border-right-color: #dfdfdf;
+  border-right-width: 1px;
+  position: fixed;
+  width: 240px;
+  height: 100vh;
+  overflow-y: scroll;
+}
+
+a.tag {
+  color: #999999;
+}
+
+.sidebar-contents {
+  padding: 50px 40px 0 40px;
+}
+
+.contents {
+  height: 1000px;
+}
+
+.category-icon {
+  margin-right: 10px;
+}
+
+
+@media screen and (min-width: 960px) {
+  .contents {
+    padding-left: 240px;
+  }
+  #toggle-button {
+    display: none;
+  }
+}

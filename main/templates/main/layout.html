@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  {% include "main/head_default.html" %}
+  <meta charset="utf-8">
+  <title>{% block title %}자람 위키{% endblock %}</title>
+  <link rel="stylesheet" href="{{ static('main/css/layout.css') }}"> {% block head %} {% endblock %}
+</head>
+
+<body>
+  <div class="uk-offcanvas-content">
+    <div class='sidebar-left uk-visible@m'>
+      <div class='sidebar-contents'>
+        <h2 style="display: inline; margin : 0;">JARAM</h2>
+        <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+        <ul class="uk-nav uk-nav-default" style="margin-top:30px;">
+          <li class="uk-nav-header">Category</li>
+          <li><a href="#"><span class="category-icon" uk-icon="icon: album"></span>Seminar</a></li>
+          <li><a href="#"><span class="category-icon" uk-icon="icon: pencil"></span>Study</a></li>
+          <li><a href="#"><span class="category-icon" uk-icon="icon: nut"></span>Workshop</a></li>
+          <li class="uk-nav-divider"></li>
+        </ul>
+        <ul class="uk-nav uk-nav-default">
+          <li class="uk-nav-header">Recent Posts</li>
+          <dl class="uk-description-list">
+            <dt>Description term</dt>
+            <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+            <dt>Description term</dt>
+            <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+            <dt>Description term</dt>
+            <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+          </dl>
+          <li class="uk-nav-divider"></li>
+        </ul>
+        <ul class="uk-nav uk-nav-default">
+          {# TODO: IMPLEMENT TAGS API #}
+          <li class="uk-nav-header">Tags</li>
+          <a class="tag" href="#">apple</a>
+          <a class="tag" href="#">banana</a>
+          <a class="tag" href="#">cat</a>
+          <a class="tag" href="#">dog</a>
+          <a class="tag" href="#">elephant</a>
+          <a class="tag" href="#">fox</a>
+          <a class="tag" href="#">gdragon</a>
+          <a class="tag" href="#">hippo</a>
+          <li class="uk-nav-divider" style="margin-top:15px;"></li>
+        </ul>
+      </div>
+    </div>
+    <div class="contents uk-section uk-section-default" style="padding-top:0;">
+      <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent; top: 200">
+        <nav class="uk-navbar-container uk-navbar-transparent" uk-navbar>
+          <div class="uk-navbar-left">
+            <div class="uk-navbar-left">
+              <a id="toggle-button" class="uk-navbar-toggle" uk-navbar-toggle-icon href="#" uk-toggle="target: #offcanvas-flip"></a>
+            </div>
+          </div>
+          <div class="uk-navbar-right">
+            <ul class="uk-navbar-nav">
+              <li><a href="#">Sign out</a></li>
+              <li><a href="#">Profile</a></li>
+              <li><a class="uk-search-toggle" href="" uk-search-icon></a></li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="uk-container uk-container-small uk-position-relative">
+        {% block body %} {% endblock %}
+      </div>
+      <div class="uk-offcanvas-content">
+        <div id="offcanvas-flip" uk-offcanvas="overlay: true; mode: reveal">
+          <div class="uk-offcanvas-bar">
+            <button class="uk-offcanvas-close" type="button" uk-close></button>
+            <div class='uk-invisible@m'>
+              <div class='sidebar-contents'>
+                <h2 style="display: inline; margin : 0;">JARAM</h2>
+                <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+                <ul class="uk-nav uk-nav-default" style="margin-top:30px;">
+                  <li class="uk-nav-header">Category</li>
+                  <li><a href="#"><span class="category-icon" uk-icon="icon: album"></span>Seminar</a></li>
+                  <li><a href="#"><span class="category-icon" uk-icon="icon: pencil"></span>Study</a></li>
+                  <li><a href="#"><span class="category-icon" uk-icon="icon: nut"></span>Workshop</a></li>
+                  <li class="uk-nav-divider"></li>
+                </ul>
+                <ul class="uk-nav uk-nav-default">
+                  <li class="uk-nav-header">Recent Posts</li>
+                  <dl class="uk-description-list">
+                    <dt>Description term</dt>
+                    <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+                    <dt>Description term</dt>
+                    <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+                    <dt>Description term</dt>
+                    <dd>{{ "Lorem ipsum dolor sit amet, consectetur adipiscing elit."|truncate(50) }}</dd>
+                  </dl>
+                  <li class="uk-nav-divider"></li>
+                </ul>
+                <ul class="uk-nav uk-nav-default">
+                  {# TODO: IMPLEMENT TAGS API #}
+                  <li class="uk-nav-header">Tags</li>
+                  <a class="tag" href="#">apple</a>
+                  <a class="tag" href="#">banana</a>
+                  <a class="tag" href="#">cat</a>
+                  <a class="tag" href="#">dog</a>
+                  <a class="tag" href="#">elephant</a>
+                  <a class="tag" href="#">fox</a>
+                  <a class="tag" href="#">gdragon</a>
+                  <a class="tag" href="#">hippo</a>
+                  <li class="uk-nav-divider" style="margin-top:15px;"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+</body>
+
+</html>
