@@ -12,6 +12,7 @@ djangorestframework = "*"
 "jinja2" = "*"
 gunicorn = "*"
 "dj-database-url" = "*"
+whitenoise = "*"
 
 
 [dev-packages]
