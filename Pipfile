@@ -10,6 +10,7 @@ pytz = "==2017.2"
 "psycopg2" = "*"
 djangorestframework = "*"
 "jinja2" = "*"
+gunicorn = "*"
 
 
 [dev-packages]
