@@ -1,0 +1,69 @@
+{% extends 'main/layout.html' %}
+
+{% block head %}
+  <link rel="stylesheet" href="{{ static('main/css/main.css') }}">
+{% endblock %}
+
+{% block title %}
+  {{ super() }}
+{% endblock %}
+
+{% block body %}
+<h1>Featured Articles</h1>
+<div class="uk-position-relative uk-visible-toggle uk-light" uk-slideshow="animation: fade; ratio: 3:1; autoplay: true;">
+
+    <ul class="uk-slideshow-items">
+        <li>
+            <img src="{{ static('main/img/sample1.jpeg') }}" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="{{ static('main/img/sample2.jpg') }}" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Bottom</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+        <li>
+            <img src="{{ static('main/img/sample3.jpeg') }}" alt="" uk-cover>
+            <div class="uk-overlay uk-overlay-primary uk-position-bottom uk-text-center uk-transition-slide-bottom">
+                <h3 class="uk-margin-remove">Left</h3>
+                <p class="uk-margin-remove">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+        </li>
+    </ul>
+
+    <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
+    <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
+
+</div>
+<h1>Featured Articles</h1>
+<div>
+  <div id="featured-article" class="uk-background-cover uk-height-medium uk-panel uk-flex uk-flex-center uk-flex-middle" style="background-image: url('{{ static('main/img/sample1.jpeg') }}')">
+    <p class="uk-h4">Cover</p>
+  </div>
+</div>
+<br>
+<!-- <div class="featured-article"></div> -->
+<div class="uk-child-width-1-2@m uk-grid-small uk-grid-match" uk-grid>
+  <div>
+    <div class="uk-card uk-card-default">
+      <div class="uk-card-body">
+        <h3 class="uk-card-title">Current Comments</h3>
+        <h4>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</h4>
+        <hr>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div class="uk-card uk-card-default uk-card-body">
+      <h3 class="uk-card-title">Primary</h3>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+    </div>
+  </div>
+</div>
+{% endblock %}
