@@ -19,6 +19,8 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^', include('main.urls')),
+    url(r'^api/', include('api.urls')),
+    url(r'^o/', include('oauth2_provider.urls', namespace='oauth2_provider')),
     url(r'^seminar/', include('seminar.urls')),
     url(r'^study/', include('study.urls')),
     url(r'^workshop/', include('workshop.urls')),

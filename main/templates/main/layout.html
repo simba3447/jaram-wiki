@@ -12,8 +12,10 @@
   <div class="uk-offcanvas-content">
     <div class='sidebar-left uk-visible@m'>
       <div class='sidebar-contents'>
-        <h2 style="display: inline; margin : 0;">JARAM</h2>
-        <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+        <a class="uk-link-reset" href="{{ url('homepage_main') }}">
+          <h2 style="display: inline; margin : 0;">JARAM</h2>
+          <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+        </a>
         <ul class="uk-nav uk-nav-default" style="margin-top:30px;">
           <li class="uk-nav-header">Category</li>
           <li><a href="#"><span class="category-icon" uk-icon="icon: album"></span>Seminar</a></li>
@@ -59,7 +61,7 @@
           <div class="uk-navbar-right">
             <ul class="uk-navbar-nav">
               <li><a href="#">Sign out</a></li>
-              <li><a href="#">Profile</a></li>
+              <li><a href="{{ url('profile') }}">Profile</a></li>
               <li><a class="uk-search-toggle" href="" uk-search-icon></a></li>
             </ul>
           </div>
@@ -74,8 +76,10 @@
             <button class="uk-offcanvas-close" type="button" uk-close></button>
             <div class='uk-invisible@m'>
               <div class='sidebar-contents'>
-                <h2 style="display: inline; margin : 0;">JARAM</h2>
-                <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+                <a class="uk-link-reset" href="{{ url('homepage_main') }}">
+                  <h2 style="display: inline; margin : 0;">JARAM</h2>
+                  <h2 style="display: inline; margin : 0; font-weight:100;">Wiki</h2>
+                </a>
                 <ul class="uk-nav uk-nav-default" style="margin-top:30px;">
                   <li class="uk-nav-header">Category</li>
                   <li><a href="#"><span class="category-icon" uk-icon="icon: album"></span>Seminar</a></li>
