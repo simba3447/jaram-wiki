@@ -47,7 +47,11 @@ WIKI_APPS = [
     'workshop',
 ]
 
-THIRD_PARTY_APPS = []
+THIRD_PARTY_APPS = [
+    'rest_framework',
+    'oauth2_provider',
+    'corsheaders',
+]
 
 INSTALLED_APPS = DJANGO_APPS + WIKI_APPS + THIRD_PARTY_APPS
 
@@ -59,6 +63,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'jaram_wiki.urls'
@@ -74,7 +79,7 @@ TEMPLATES = [
         ],
         'APP_DIRS': True,
         'OPTIONS': {
-            'environment' : 'jaram_wiki.settings.jinja2.environment',
+            'environment': 'jaram_wiki.settings.jinja2.environment',
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
@@ -156,3 +161,14 @@ STATICFILES_DIRS = (
     'study/static',
     'workshop/static',
 )
+
+# Rest Framework
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': ('rest_framework.permissions.IsAdminUser',),
+    'PAGINATE_BY': 10
+}
+
+# Authentication
+# https://django-oauth-toolkit.readthedocs.io/en/latest/tutorial/tutorial_01.html
+
+CORS_ORIGIN_ALLOW_ALL = True
